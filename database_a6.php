@@ -83,7 +83,7 @@
 <div class="container"></div>
 <div class="panel panel-custom-horrible-purple">
     <div class="panel-heading">
-        <h3 class="panel-title" style="font-size: 18px;"><center>Database of MOT B-A3</h3>
+        <h3 class="panel-title" style="font-size: 18px;"><center>Database of MOT A-A6</h3>
     </div>
     <div class="panel-body">
         <form class="form-inline" method="GET" id="selectdate" action="#">
@@ -116,7 +116,7 @@
                     $time = date('H:i:s',strtotime('08:00:00'));
                     $timeAdmin = date('H:i:s',strtotime('08:00:00')); 
                     $TimeAdmin = $sdate.' '.$timeAdmin; 
-                    $sqlAdmin = $db->query("SELECT Date_Time,Product_Name,Count,start_time,end_time FROM a3 WHERE Date_Time BETWEEN '$sdate $time' AND '$edate $time'");
+                    $sqlAdmin = $db->query("SELECT Date_Time,Product_Name,Count,start_time,end_time FROM a6 WHERE Date_Time BETWEEN '$sdate $time' AND '$edate $time'");
                     $usetime = 0;
                     $F1 = TRUE;
                     while($data=$sqlAdmin->fetch_array(MYSQLI_ASSOC)){
@@ -166,7 +166,7 @@
         var ws = XLSX.utils.table_to_sheet(elt);
         //var ws2 = XLSX.utils.table_to_sheet(elt2);
         var wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Database_A3");
+        XLSX.utils.book_append_sheet(wb, ws, "Database_A6");
         //XLSX.utils.book_append_sheet(wb, ws2, "Sheet 2");
         var wbout = XLSX.write(wb, {
             bookType: 'xlsx',
@@ -175,7 +175,7 @@
         });
         saveAs(new Blob([s2ab(wbout)], {
             type: "application/octet-stream"
-        }), 'Database_A3.xlsx');
+        }), 'Database_A6.xlsx');
     }
     function s2ab(s) {
         var buf = new ArrayBuffer(s.length);
