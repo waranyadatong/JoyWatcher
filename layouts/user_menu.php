@@ -64,7 +64,7 @@
     <nav class="animated bounceInDown">
         <ul>
             <li>
-                <a href="totaldashboard.php">
+                <a href="overallb.php">
                     <i class="glyphicon glyphicon-home"></i>
                     <span>Home</span>
                 </a>
@@ -161,19 +161,109 @@
                 </ul>
             </li>
 
-            <li>
+            <li class="sub-menu">
+                <a href="#">
+                    <i class="glyphicon glyphicon-list-alt"></i>
+                    <span>Database</span>
+                    <div class="fa fa-caret-down right"></div>
+                </a>
+                <ul>
+                    <li class="sub-menu">
+                        <a href="#">MOT B<div class="fa fa-caret-down right"></div></a>
+                        <ul>
+                            <li>
+                                <a href="database_a1.php">A1</a>
+                            </li>
+                            <li>
+                                <a href="database_a2.php">A2</a>
+                            </li>
+                            <li>
+                                <a href="Filterdatabase.php">A3</a>
+                            </li>
+                            <li>
+                                <a href="database_a4.php">A4</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="#">MOT A<div class="fa fa-caret-down right"></div></a>
+                        <ul>
+                            <li>
+                                <a href="database_a5.php">A5</a>
+                            </li>
+                            <li>
+                                <a href="database_a6.php">A6</a>
+                            </li>
+                            <li>
+                                <a href="database_a7.php">A7</a>
+                            </li>
+                            <li>
+                                <a href="database_a8.php">A8</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!--<li>
                 <a href="Filterdatabase.php">
                     <i class="glyphicon glyphicon-list-alt"></i>
                     <span>Database</span>
                 </a>
+            </li>-->
+
+            <li class="sub-menu">
+                <a href="#">
+                    <i class="glyphicon glyphicon-stats"></i>
+                    <span>Analysis</span>
+                    <div class="fa fa-caret-down right"></div>
+                </a>
+                <ul>
+                    <li class="sub-menu">
+                        <a href="#">MOT B<div class="fa fa-caret-down right"></div></a>
+                        <ul>
+                            <li>
+                                <a href="analysis_a1.php">A1</a>
+                            </li>
+                            <li>
+                                <a href="analysis_a2.php">A2</a>
+                            </li>
+                            <li>
+                                <a href="c.php">A3</a>
+                            </li>
+                            <li>
+                                <a href="analysis_a4.php">A4</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="#">MOT A<div class="fa fa-caret-down right"></div></a>
+                        <ul>
+                            <li>
+                                <a href="analysis_a5.php">A5</a>
+                            </li>
+                            <li>
+                                <a href="analysis_a6.php">A6</a>
+                            </li>
+                            <li>
+                                <a href="analysis_a7.php">A7</a>
+                            </li>
+                            <li>
+                                <a href="analysis_a8.php">A8</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
 
-            <li>
+            <!--<li>
                 <a href="c.php">
                     <i class="glyphicon glyphicon-stats"></i>
                     <span>Analysis</span>
                 </a>
-            </li>
+            </li>-->
         </ul>
     </nav>
 </body>
