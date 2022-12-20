@@ -89,6 +89,7 @@
 
     $barlanceresult = $pcsday - $targetresult;
     $hourtarget = $targetresult/24;
+    
     /*$target8 = $hourtarget*1;
     $target9 = $hourtarget*2;
     $target10 = $hourtarget*3;
@@ -625,7 +626,7 @@
                   <!--<span class="iconify" data-icon="bi:pin-angle-fill" style="color: #FFFFFF; margin-left: 47px; margin-top: 5px;" data-width="28"></span>-->
                 </p>
                 <p style="font-size: 16px; margin-left: 10px; margin-top: -15px;">(Pcs/Hr)</p>
-                <h3 id="targetHr" style="font-size: 52px; text-align: center; margin-top: -5px; font-weight: bold;"></h3>
+                <h3 id="barlanceHr" style="font-size: 52px; text-align: center; margin-top: -5px; font-weight: bold;"></h3>
               </div>
             </div>
           </div>
@@ -649,7 +650,7 @@
                   <!--<span class="iconify" data-icon="material-symbols:auto-graph" style="color: #FFFFFF; margin-left: 72px; margin-top: 3px;" data-width="32"></span>-->
                 </p>
                 <p style="font-size: 16px; margin-left: 10px; margin-top: -15px;">(Pcs/Hr)</p>
-                 <h3 id="barlanceHr" style="font-size: 52px; text-align: center; margin-top: -5px; font-weight: bold;"></h3>
+                 <h3 id="targetHr" style="font-size: 52px; text-align: center; margin-top: -5px; font-weight: bold;"></h3>
               </div>
             </div>
           </div>
@@ -1238,7 +1239,7 @@
             const hour = now.getHours();*/
 
 
-            var barlanceDay = $("div.boxbarlance-day").html(); 
+            /*var barlanceDay = $("div.boxbarlance-day").html(); 
               if(barlanceDay < 0) {
                 $("div.boxbarlance-day").css("background-color", "#FF0000");//red
               } else {
@@ -1246,6 +1247,19 @@
               }
 
             var barlanceHr = $("div.boxbarlance-hr").html();
+              if(barlanceHr < 0) {
+                $("div.boxbarlance-hr").css("background-color", "#FF0000");//red
+              } else {
+                $("div.boxbarlance-hr").css("background-color", "#00CC00");//green
+              }*/
+
+            var barlanceDay = parseInt(document.getElementById("barlance").innerHTML,10);
+              if(barlanceDay < 0) {
+                $("div.boxbarlance-day").css("background-color", "#FF0000");//red
+              } else {
+                $("div.boxbarlance-day").css("background-color", "#00CC00");//green
+              }
+            var barlanceHr = parseInt(document.getElementById("targetHr").innerHTML,10);
               if(barlanceHr < 0) {
                 $("div.boxbarlance-hr").css("background-color", "#FF0000");//red
               } else {
