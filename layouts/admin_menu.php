@@ -124,6 +124,10 @@
                 </a>
                 <ul>
                     <li class="sub-menu">
+                        <a href="overalldashboard.php">OVERALL DASHBOARD</a>
+                    </li>
+
+                    <li class="sub-menu">
                         <a href="#">MOT B<div class="fa fa-caret-down right"></div></a>
                         <ul>
                             <li>
