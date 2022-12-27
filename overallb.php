@@ -1204,6 +1204,33 @@
 		color: #FFFFFF;
 		background-color: #CD5C5C;
 	}
+
+	/*.blinking {
+		animation: mymove 2s infinite alternate;
+	}
+
+	@keyframes mymove {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}*/
+
+	.flash {
+		-webkit-animation-name:flash;
+		-webkit-animation-duration:1s;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-timing-function:ease-in-out;
+		-webkit-animation-direction:alternate;
+	}
+
+	@-webkit-keyframes flash {
+		from {
+			color:Chartreuse;
+		}
+
+		to {
+			color:black;
+		}
+	}
 	/* ----------------------- A-4 -----------------------*/
 </style>
 
@@ -1244,6 +1271,12 @@
 	</div>
 </body>-->
 <body>
+	<!--<style type="text/css">
+		#productA1 .realtime{
+			color: green;
+		}
+
+	</style>-->
 	<h1>SMT-MOT MACHINE</h1>
 	<br/>
 	<div class="table-wrapper">
@@ -1254,7 +1287,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="productA1"></td> <!-- id="productA1" -->
+							<td id="productA1" class="flash"></td> <!-- id="productA1" -->
 						</tr>
 
 						<tr>
@@ -1297,7 +1330,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="productA2"></td>
+							<td id="productA2" class="flash"></td>
 						</tr>
 
 						<tr>
@@ -1340,7 +1373,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="product"></td>
+							<td id="product" class="flash"></td>
 						</tr>
 
 						<tr>
@@ -1383,7 +1416,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="productA4"></td>
+							<td id="productA4" class="flash"></td>
 						</tr>
 
 						<tr>
