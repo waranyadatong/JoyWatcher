@@ -1475,7 +1475,6 @@
 </body>
 
 <script>
-	var noplan ='No Plan/No Run';
 $(function() {
    	function realTime() {
       	setTimeout(function(){
