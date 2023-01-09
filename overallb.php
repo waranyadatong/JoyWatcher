@@ -1231,6 +1231,24 @@
 			color:black;
 		}
 	}
+
+	.flashred {
+		-webkit-animation-name:flashred;
+		-webkit-animation-duration:1s;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-timing-function:ease-in-out;
+		-webkit-animation-direction:alternate;
+	}
+
+	@-webkit-keyframes flashred {
+		from {
+			color:red;
+		}
+
+		to {
+			color:black;
+		}
+	}
 	/* ----------------------- A-4 -----------------------*/
 </style>
 
@@ -1287,7 +1305,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="productA1" class="flash"></td> <!-- id="productA1" -->
+							<td id="productA1"></td> <!-- id="productA1" -->
 						</tr>
 
 						<tr>
@@ -1330,7 +1348,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="productA2" class="flash"></td>
+							<td id="productA2"></td>
 						</tr>
 
 						<tr>
@@ -1369,11 +1387,11 @@
 
 			<div class="col-sm-3 col-lg-3">
 				<h3>MOT B-A3</h3>
-				<table class="fl-table-03">
+				<table class="fl-table-03" id="aa3">
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="product" class="flash"></td>
+							<td id="product"></td>
 						</tr>
 
 						<tr>
@@ -1416,7 +1434,7 @@
 					<tbody>
 						<tr>
 							<th>Product</th>
-							<td id="productA4" class="flash"></td>
+							<td id="productA4"></td>
 						</tr>
 
 						<tr>
@@ -1457,6 +1475,7 @@
 </body>
 
 <script>
+	var noplan ='No Plan/No Run';
 $(function() {
    	function realTime() {
       	setTimeout(function(){
@@ -1569,6 +1588,15 @@ $(function() {
             	} else {
             		$("td.cell-hr-A1").css("color", "#08DB0B"); // Green Color
             	}
+
+            	var pA1 = document.getElementById("productA1").innerText;
+            	if (pA1 =='No Plan/No Run') { 
+            		//$("#productA1").css("color", "#D80000"); // Red Color
+            		$("#productA1").addClass("flashred"); // Red Color
+            	} else {
+            		//$("#productA1").css("color", "#08DB0B"); // Green Color
+            		$("#productA1").addClass("flash");
+            	}
             	/* --------------------- A1 --------------------- */
 
             	var balanceDayA2 = parseInt(document.getElementById("barlanceA2").innerHTML, 10);
@@ -1583,6 +1611,15 @@ $(function() {
             		$("td.cell-hr-A2").css("color", "#D80000"); // Red Color
             	} else {
             		$("td.cell-hr-A2").css("color", "#08DB0B"); // Green Color
+            	}
+
+            	var pA2 = document.getElementById("productA2").innerText;
+            	if (pA2 ==='No Plan/No Run') { 
+            		//$("#productA2").css("color", "#D80000"); // Red Color
+            		$("#productA2").addClass("flashred"); // Red Color
+            	} else {
+            		//$("#productA2").css("color", "#08DB0B"); // Green Color
+            		$("#productA2").addClass("flash");
             	}
             	/* --------------------- A2 --------------------- */
 
@@ -1599,6 +1636,15 @@ $(function() {
             	} else {
             		$("td.cell-hr-A3").css("color", "#08DB0B"); // Green Color
             	}
+
+            	var pA3 = document.getElementById("product").innerText;
+            	if (pA3 =='No Plan/No Run') { 
+            		//$("#productA1").css("color", "#D80000"); // Red Color
+            		$("#product").addClass("flashred"); // Red Color
+            	} else {
+            		//$("#productA1").css("color", "#08DB0B"); // Green Color
+            		$("#product").addClass("flash");
+            	}
             	/* --------------------- A3 --------------------- */
 
             	var balanceDayA4 = parseInt(document.getElementById("barlanceA4").innerHTML, 10);
@@ -1613,6 +1659,15 @@ $(function() {
             		$("td.cell-hr-A4").css("color", "#D80000"); // Red Color
             	} else {
             		$("td.cell-hr-A4").css("color", "#08DB0B"); // Green Color
+            	}
+
+            	var pA4 = document.getElementById("productA4").innerText;
+            	if (pA4 =='No Plan/No Run') { 
+            		//$("#productA1").css("color", "#D80000"); // Red Color
+            		$("#productA4").addClass("flashred"); // Red Color
+            	} else {
+            		//$("#productA1").css("color", "#08DB0B"); // Green Color
+            		$("#productA4").addClass("flash");
             	}
             	/* --------------------- A4 --------------------- */
         	});
